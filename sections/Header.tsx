@@ -7,27 +7,30 @@ export default function Header() {
         Building full-stack mobile and web apps for 5 years.
       </p>
 
-      <div className="flex flex-wrap gap-2 text-xs font-bold text-white">
+      <div className="flex gap-4 text-sm font-medium text-gray-500">
         {/* Socials */}
+
         <a
           href="mailto:amalsony5@gmail.com"
-          className="px-3 py-1 rounded-xl bg-[#DB4437] border-2 border-white shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 transition-all"
+          className="hover:text-black transition-colors border-b border-transparent hover:border-black uppercase font-bold"
         >
           Email
         </a>
+
         <a
           href="https://github.com/amalsony"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-1 rounded-xl bg-[#181717] border-2 border-white shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 transition-all"
+          className="hover:text-black transition-colors border-b border-transparent hover:border-black uppercase font-bold"
         >
           Github
         </a>
+
         <a
           href="https://linkedin.com/in/amalsony"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-1 rounded-xl bg-[#0072b1] border-2 border-white shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 transition-all"
+          className="hover:text-black transition-colors border-b border-transparent hover:border-black uppercase font-bold"
         >
           LinkedIn
         </a>

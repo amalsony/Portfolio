@@ -2,6 +2,7 @@ import Image from "next/image";
 
 // Sections
 import Header from "@/sections/Header";
+import Languages from "@/sections/Languages";
 
 export default function Home() {
   const projects = [
@@ -20,7 +21,7 @@ export default function Home() {
       title: "UniversalNotes",
       description:
         "An open-source browser extension that brings Community Notes from X/Twitter to the rest of the internet. Features secure OAuth syncing between the extension and the Next.js web app.",
-      tech: ["React", "Next.js", "Chrome Extension", "OAuth"],
+      tech: ["Next.js", "Chrome Extension", "OAuth"],
       link: "https://www.universalnotes.org",
       color: "#14428bff",
       theme: "dark",
@@ -37,11 +38,23 @@ export default function Home() {
     },
   ];
 
+  const languages = [
+    "Java",
+    "Python",
+    "C",
+    "JavaScript",
+    "TypeScript",
+    "Swift",
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans selection:bg-gray-200">
       <main className="max-w-2xl mx-auto py-20 px-6">
         {/* Header Section */}
         <Header />
+
+        {/* Languages Section */}
+        {/* <Languages languages={languages} /> */}
 
         {/* Projects Section */}
         <section>
