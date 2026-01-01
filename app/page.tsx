@@ -1,64 +1,130 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const projects = [
+    {
+      id: "wardrobeai",
+      title: "WardrobeAI",
+      description:
+        "A full-stack AI fashion app enabling users to digitize wardrobes and generate AI-recommended outfit suggestions. Scaled to 2,900+ users.",
+      tech: ["React Native", "Swift", "OpenAI API", "LLM", "MongoDB"],
+      link: "https://www.wardrobeai.app",
+      color: "#BD42C0",
+      theme: "light",
+    },
+    {
+      id: "universalnotes",
+      title: "UniversalNotes",
+      description:
+        "An open-source browser extension that brings Community Notes from X/Twitter to the rest of the internet. Features secure OAuth syncing.",
+      tech: ["React", "Next.js", "Chrome Extension API"],
+      link: "https://www.universalnotes.org",
+      color: "#1E293B",
+      theme: "dark",
+    },
+    {
+      id: "teegle",
+      title: "Teegle",
+      description:
+        "A social network for learning where users create topic-based Q&A communities. Grew to 200+ users.",
+      tech: ["Next.js", "Express", "GraphQL", "MongoDB"],
+      link: "https://www.teegle.app",
+      color: "#10B981",
+      theme: "light",
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans selection:bg-gray-200">
+      <main className="max-w-2xl mx-auto py-20 px-6">
+        {/* Header Section */}
+        <header className="mb-16">
+          <h1 className="text-4xl font-bold tracking-tight mb-2">
+            Amal Palackal
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg text-gray-600 mb-6">
+            2nd-year Computer Science student at Penn State <br />
+            Building full-stack mobile and web apps for 4 years
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+          <div className="flex gap-4 text-sm font-medium text-gray-500">
+            {/* Socials */}
+            <a
+              href="mailto:amalsony5@gmail.com"
+              className="hover:text-black transition-colors border-b border-transparent hover:border-black"
+            >
+              Email
+            </a>
+            <a
+              href="https://github.com/amalsony"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-black transition-colors border-b border-transparent hover:border-black"
+            >
+              Github
+            </a>
+            <a
+              href="https://linkedin.com/in/amalsony"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-black transition-colors border-b border-transparent hover:border-black"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </header>
+
+        {/* Projects Section */}
+        <section>
+          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">
+            Selected Projects
+          </h2>
+
+          <div className="space-y-8">
+            {projects.map((project) => (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+                style={{ borderLeft: `4px solid ${project.color}` }}
+              >
+                <div className="flex justify-between items-baseline mb-2">
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ color: project.color }}
+                  >
+                    {project.title}
+                  </h3>
+                  <span className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Visit Project →
+                  </span>
+                </div>
+
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-md"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="mt-20 pt-8 border-t border-gray-100 text-center text-gray-400 text-sm">
+          <p>&copy; {new Date().getFullYear()} Amal Palackal.</p>
+        </footer>
       </main>
     </div>
   );
