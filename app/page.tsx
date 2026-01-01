@@ -101,7 +101,7 @@ export default function Home() {
                   <div className="opacity-60 group-hover:opacity-100 transition-opacity">
                     <Image
                       src="/external_link.svg"
-                      alt="External Link"
+                      alt="Open External Link"
                       width={20}
                       height={20}
                     />
