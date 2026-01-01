@@ -6,7 +6,7 @@ export default function Home() {
       id: "wardrobeai",
       title: "WardrobeAI",
       description:
-        "A full-stack AI fashion app enabling users to digitize wardrobes and generate AI-recommended outfit suggestions. Scaled to 2,900+ users.",
+        "A full-stack AI fashion app enabling users to digitize wardrobes and generate AI-recommended outfit suggestions. Scaled to 3,200+ users.",
       tech: ["React Native", "Swift", "OpenAI API", "LLM", "MongoDB"],
       link: "https://www.wardrobeai.app",
       color: "#BD42C0",
@@ -16,10 +16,10 @@ export default function Home() {
       id: "universalnotes",
       title: "UniversalNotes",
       description:
-        "An open-source browser extension that brings Community Notes from X/Twitter to the rest of the internet. Features secure OAuth syncing.",
-      tech: ["React", "Next.js", "Chrome Extension API"],
+        "An open-source browser extension that brings Community Notes from X/Twitter to the rest of the internet. Features secure OAuth syncing between the extension and the Next.js web app.",
+      tech: ["React", "Next.js", "Chrome Extension", "OAuth"],
       link: "https://www.universalnotes.org",
-      color: "#1E293B",
+      color: "#14428bff",
       theme: "dark",
     },
     {
@@ -29,7 +29,7 @@ export default function Home() {
         "A social network for learning where users create topic-based Q&A communities. Grew to 200+ users.",
       tech: ["Next.js", "Express", "GraphQL", "MongoDB"],
       link: "https://www.teegle.app",
-      color: "#10B981",
+      color: "#13976bff",
       theme: "light",
     },
   ];
@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-20 pt-8 border-t border-gray-100 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Amal Palackal.</p>
+          <p>&copy; {new Date().getFullYear()} Amal Palackal</p>
         </footer>
       </main>
     </div>
