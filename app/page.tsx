@@ -1,13 +1,16 @@
 import Image from "next/image";
 
+// Sections
+import Header from "@/sections/Header";
+
 export default function Home() {
   const projects = [
     {
       id: "wardrobeai",
       title: "WardrobeAI",
       description:
-        "A full-stack AI fashion app enabling users to digitize wardrobes and generate AI-recommended outfit suggestions. Scaled to 3,200+ users.",
-      tech: ["React Native", "Swift", "OpenAI API", "LLM", "MongoDB"],
+        "A full-stack AI fashion app enabling users to digitize their wardrobe and generate AI-recommended outfit suggestions. Scaled to 3,200+ users.",
+      tech: ["React Native", "Swift", "OpenAI API", "LLM", "MongoDB", "AWS S3"],
       link: "https://www.wardrobeai.app",
       color: "#BD42C0",
       theme: "light",
@@ -27,7 +30,7 @@ export default function Home() {
       title: "Teegle",
       description:
         "A social network for learning where users create topic-based Q&A communities. Grew to 200+ users.",
-      tech: ["Next.js", "Express", "GraphQL", "MongoDB"],
+      tech: ["Next.js", "Express", "GraphQL", "MongoDB", "AWS S3"],
       link: "https://www.teegle.app",
       color: "#13976bff",
       theme: "light",
@@ -38,46 +41,12 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans selection:bg-gray-200">
       <main className="max-w-2xl mx-auto py-20 px-6">
         {/* Header Section */}
-        <header className="mb-16">
-          <h1 className="text-4xl font-bold tracking-tight mb-2">
-            Amal Palackal
-          </h1>
-          <p className="text-lg text-gray-600 mb-6">
-            2nd-year Computer Science student at Penn State <br />
-            Building full-stack mobile and web apps for 4 years
-          </p>
-
-          <div className="flex gap-4 text-sm font-medium text-gray-500">
-            {/* Socials */}
-            <a
-              href="mailto:amalsony5@gmail.com"
-              className="hover:text-black transition-colors border-b border-transparent hover:border-black"
-            >
-              Email
-            </a>
-            <a
-              href="https://github.com/amalsony"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-black transition-colors border-b border-transparent hover:border-black"
-            >
-              Github
-            </a>
-            <a
-              href="https://linkedin.com/in/amalsony"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-black transition-colors border-b border-transparent hover:border-black"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </header>
+        <Header />
 
         {/* Projects Section */}
         <section>
-          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">
-            Selected Projects
+          <h2 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-8">
+            Portfolio
           </h2>
 
           <div className="space-y-8">
@@ -108,7 +77,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-800 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
