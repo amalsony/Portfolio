@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const projects = [
@@ -97,9 +97,15 @@ export default function Home() {
                   >
                     {project.title}
                   </h3>
-                  <span className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Visit Project →
-                  </span>
+
+                  <div className="opacity-60 group-hover:opacity-100 transition-opacity">
+                    <Image
+                      src="/external_link.svg"
+                      alt="External Link"
+                      width={20}
+                      height={20}
+                    />
+                  </div>
                 </div>
 
                 <p className="text-gray-600 mb-4 leading-relaxed">
